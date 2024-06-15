@@ -1,0 +1,46 @@
+1. VIP Number
+          Identify a mobile number is VIP or not if any digigt in mobile number occurs more than 4 is VIP number.
+
+bool VipNumber(string s){
+      map<char,int> mp;
+      for(int i = 0; i < s.size(); i++){
+            mp[s[i]]++;
+      }
+
+      for(auto it : ch){
+            if(ch.second >= 4){
+                  return true;
+            }
+      }
+      return false;
+}
+
+TC: 
+  9999900000 -> true
+  8856024135 -> false
+  
+
+2. Least occurring vowel in a word:
+          Given a string return a vowel that is least occurring.
+
+string LeastOccuringVowel(string s){
+      map<char,int> mp;
+      vector<char> ans;
+      for(int i = 0; i < s.size(); i++){
+            mp[s[i]]++;
+      }
+
+      for(auto it : ch){
+            if(ch.first == 'a' || ch.first == 'e' || ch.first == 'i' || ch.first == 'o' || ch.first == 'u' ||){
+                  ans.push_back(ch.first);
+            }
+      }
+
+      return ans[ans.size()-1];
+}
+
+TC: 
+  Kartikey -> e
+  Harkirat -> i
+  Cohort -> o
+
